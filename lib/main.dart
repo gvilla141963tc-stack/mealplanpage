@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'pagesmeal_plan_page.dart';
+import 'package:mealplanner/pages/meal_plan_page.dart';
+
 
 void main() {
   runApp(const MyApp());
