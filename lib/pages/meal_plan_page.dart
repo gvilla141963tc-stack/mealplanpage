@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mealplanner/widgets/custom_app_bar.dart';
 import 'package:mealplanner/widgets/search_box.dart';
+import 'package:mealplanner/widgets/section_title.dart';
 
 class MealPlanPage extends StatelessWidget {
   const MealPlanPage({super.key});
@@ -14,6 +15,8 @@ class MealPlanPage extends StatelessWidget {
           children: [
             SizedBox(height: 16),
             SearchBox(),
+            SectionTitle()
+
           ]
         ),
       ));
