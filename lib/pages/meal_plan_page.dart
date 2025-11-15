@@ -9,7 +9,6 @@ class MealPlanPage extends StatelessWidget {
     return Scaffold(
       appBar: CustomAppBar(),
       body: Column(
-       
         children: [
           SizedBox(height: 16),
           SearchBox(),
@@ -24,39 +23,42 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AppBar(
-      leading: Container(
-        margin: const EdgeInsets.all(8.0),
-        decoration: BoxDecoration(
-          color: Colors.grey.withAlpha(50),
-          borderRadius: BorderRadius.circular(10),
-        ),
-        child: IconButton(
-          icon: SvgPicture.asset('assets/icons/Arrow - Left 2.svg', height: 20),
-          onPressed: () {},
-        ),
-      ),
-
-      title: Text(
-        'Breakfast',
-        style: TextStyle(fontFamily: 'Poppins', fontWeight: FontWeight.w700),
-      ),
-      centerTitle: true,
-
-      actions: [
-        Container(
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 16),
+      child: AppBar(
+        leading: Container(
           margin: const EdgeInsets.all(8.0),
           decoration: BoxDecoration(
             color: Colors.grey.withAlpha(50),
             borderRadius: BorderRadius.circular(10),
           ),
           child: IconButton(
-            icon: SvgPicture.asset('assets/icons/dots.svg', height: 6),
+            icon: SvgPicture.asset('assets/icons/Arrow - Left 2.svg', height: 20),
             onPressed: () {},
           ),
         ),
-        const SizedBox(width: 8),
-      ],
+      
+        title: Text(
+          'Breakfast',
+          style: TextStyle(fontFamily: 'Poppins', fontWeight: FontWeight.w700),
+        ),
+        centerTitle: true,
+      
+        actions: [
+          Container(
+            margin: const EdgeInsets.all(8.0),
+            decoration: BoxDecoration(
+              color: Colors.grey.withAlpha(50),
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: IconButton(
+              icon: SvgPicture.asset('assets/icons/dots.svg', height: 6),
+              onPressed: () {},
+            ),
+          ),
+          const SizedBox(width: 8),
+        ],
+      ),
     );
   }
 
@@ -70,10 +72,19 @@ class SearchBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.symmetric(horizontal: 22),
       padding: EdgeInsets.symmetric(horizontal: 26),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withAlpha(10),
+            spreadRadius: 0.6,
+            blurRadius:  0.6,
+            offset: Offset(0, 4)
+          )
+        ]
       ),
       child: Row(
         children: [
