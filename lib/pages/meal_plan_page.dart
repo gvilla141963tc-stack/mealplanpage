@@ -9,12 +9,13 @@ class MealPlanPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(),
-      body: Column(
-        children: [
-          SizedBox(height: 16),
-          SearchBox(),
-          
-        ]
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            SizedBox(height: 16),
+            SearchBox(),
+          ]
+        ),
       ));
   }
 }
