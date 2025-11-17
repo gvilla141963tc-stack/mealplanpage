@@ -8,8 +8,7 @@ class SectionTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Padding(
-          padding: const EdgeInsets.all(30),
+        SizedBox(
           child: SizedBox(
             width: double.infinity,
             child: Text(

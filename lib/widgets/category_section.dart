@@ -8,14 +8,14 @@ class CategorySection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: 16),
-      height: 220,
+      margin: EdgeInsets.only(left: 30, top: 30),
+      height: 200,
       width: double.infinity,
       child: Column(
         children: [
             SectionTitle(title: 'Categories'),
-            SizedBox(height: 16),
-            SizedBox(
+            Container(
+              margin: EdgeInsets.only(top: 16),
               height: 100,
               width: double.infinity,
               child: CategoryCardDisplay(),
